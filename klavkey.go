@@ -1,5 +1,4 @@
-//преобразует данные с клавы в float64
-
+//преобразует данные введенные пользователем с клавиатуры в цифры
 package klavkey
 
 import (
@@ -9,6 +8,7 @@ import (
 	"strings"
 )
 
+// преобразует введенные данные в дробное число
 func GetFloat() (float64, error) {
 	reader:= bufio.NewReader(os.Stdin)
 	input, err:= reader.ReadString('\n')
@@ -24,6 +24,7 @@ func GetFloat() (float64, error) {
 	return number, nil
 	}
 
+// преобразует введенные данные в целое число
 func GetInt() (int, error)  {
 	reader := bufio.NewReader(os.Stdin)
 
